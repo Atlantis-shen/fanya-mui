@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			h4{
+				margin-top: 20px;
+				text-align: center;
+			}
+			textarea{
+				display: block;
+				width: 80%;
+				height: 75%;
+				margin: 20px auto;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a id="return" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">菜品评价</h1>
+		</header>
+		<div class="mui-content">
+			<h4>鱼香肉丝</h4>
+			<textarea placeholder="请输入你对此菜品的评价"></textarea>
+		</div>
+		<footer class="mui-bar mui-bar-footer">
+			<a id="push">
+				<button type="button" class="mui-btn mui-btn-blue mui-btn-block">提交</button>
+			</a>
+		</footer>
+	</body>
+	
+	<script src="../js/mui.js"></script>
+	<script type="text/javascript">
+		document.getElementById('return').addEventListener('tap', function() {
+		  mui.openWindow({
+		    url: 'comment.html', 
+		    id:'comment'
+		  });
+		});
+	</script>
+
+</html>

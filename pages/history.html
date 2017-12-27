@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>历史订单</title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a id="return" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">历史订单</h1>
+		</header>
+	</body>
+
+	<script src="../js/mui.js"></script>
+	<script src="../js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" charset="utf-8">
+		mui.init({
+			subpages: [{
+				url: 'history_detail.html', //下拉刷新内容页面地址
+				id: 'history_detail.html', //内容页面标志
+				styles: {
+					top: '45px', 
+					bottom: '0px'
+				}
+			}]
+		});
+		document.getElementById('return').addEventListener('tap', function() {
+		  mui.openWindow({
+		    url: '../index.html', 
+		    id:'index'
+		  });
+		});
+	</script>
+
+</html>

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>待取订单</title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a id="return" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">待取订单</h1>
+		</header>
+		<ul class="mui-table-view" style="padding-top: 45px;">
+			<li class="mui-table-view-cell mui-media">
+				<a>
+					<img class="mui-media-object mui-pull-left" src="http://placehold.it/40x30">
+					<div class="mui-media-body">
+						待取1
+						<p class="mui-ellipsis">2018-9-9 9:11</p>
+					</div>
+				</a>
+			</li>
+			<li class="mui-table-view-cell mui-media">
+				<a>
+					<img class="mui-media-object mui-pull-left" src="http://placehold.it/40x30">
+					<div class="mui-media-body">
+						待取2
+						<p class="mui-ellipsis">2018-9-9 9:11</p>
+					</div>
+				</a>
+			</li>
+			<li class="mui-table-view-cell mui-media">
+				<a>
+					<img class="mui-media-object mui-pull-left" src="http://placehold.it/40x30">
+					<div class="mui-media-body">
+						待取3
+						<p class="mui-ellipsis">2018-9-9 9:11</p>
+					</div>
+				</a>
+			</li>
+		</ul>
+	</body>
+
+	<script src="../js/mui.js"></script>
+	<script src="../js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" charset="utf-8">
+		mui.init();
+		document.getElementById('return').addEventListener('tap', function() {
+			//打开关于页面
+			mui.openWindow({
+				url: '../index.html',
+				id: 'index'
+			});
+		});
+		for(i = 0; i < 3; i++) {
+			document.getElementsByClassName('mui-media')[i].addEventListener('tap', function() {
+				//打开关于页面
+				mui.openWindow({
+					url: 'code.html',
+					id: 'code'
+				});
+			});
+		}
+	</script>
+
+</html>

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			.mui-content>.mui-table-view:first-child {
+				margin-top: 0;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a id="return" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">订单详情</h1>
+		</header>
+		<div class="mui-content">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate">
+						鱼香肉丝
+					</a>
+					<button type="button" class="mui-btn mui-btn-blue" style="right: 75px;">点赞</button>
+					<button type="button" class="mui-btn mui-btn-blue tocomment" style="right: 5px;">评论</button>
+
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate">
+						土豆丝
+					</a>
+					<button type="button" class="mui-btn mui-btn-blue" style="right: 75px;">点赞</button>
+					<button type="button" class="mui-btn mui-btn-blue tocomment" style="right: 5px;">评论</button>
+
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate">
+						秋刀鱼
+					</a>
+					<button type="button" class="mui-btn mui-btn-blue" style="right: 75px;">点赞</button>
+					<button type="button" class="mui-btn mui-btn-blue tocomment" style="right: 5px;">评论</button>
+
+				</li>
+			</ul>
+		</div>
+	</body>
+
+	<script src="../js/mui.js"></script>
+	<script type="text/javascript" charset="utf-8">
+		mui.init();
+		document.getElementById('return').addEventListener('tap', function() {
+			mui.openWindow({
+				url: 'history.html',
+				id: 'history'
+			});
+		});
+		for (i=0;i<3;i++) {
+			document.getElementsByClassName('tocomment')[i].addEventListener('tap', function() {
+				//打开关于页面
+				mui.openWindow({
+					url: 'comment_detail.html',
+					id: 'comment_detail'
+				});
+			});
+		}
+	</script>
+
+</html>

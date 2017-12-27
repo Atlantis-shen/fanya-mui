@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>菜单</title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			.mui-numbox {
+				position: absolute;
+				top: 27px;
+				right: 20px;
+			}
+			
+			.mui-slider .mui-slider-group .mui-slider-item img {
+				height: 63px;
+				max-width: 63px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a id="return" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">食堂一</h1>
+		</header>
+		<div class="mui-slider" style="padding-top: 45px;">
+			<div class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+				<a class="mui-control-item" href="#item1">全部菜品</a>
+				<a class="mui-control-item" href="#item2">外卖菜品</a>
+			</div>
+			<div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-6"></div>
+			<div class="mui-slider-group">
+				<div id="item1" class="mui-slider-item mui-control-content mui-active">
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell mui-media">
+							<a href="javascript:;">
+								<img class="mui-media-object mui-pull-left" src="http://placehold.it/40x30">
+								<div class="mui-media-body">
+									鱼香肉丝
+									<p class="mui-ellipsis">￥12</p>
+									<p class="mui-ellipsis">余量：<span>14</span></p>
+								</div>
+								<div class="mui-numbox" data-numbox-step='1' data-numbox-min='0' data-numbox-max='10'>
+									<button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+									<input class="mui-numbox-input" type="number" />
+									<button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+								</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media">
+							<a href="javascript:;">
+								<img class="mui-media-object mui-pull-left" src="http://placehold.it/40x30">
+								<div class="mui-media-body">
+									西红柿炒番茄
+									<p class="mui-ellipsis">￥12</p>
+									<p class="mui-ellipsis">余量：<span>14</span></p>
+								</div>
+								<div class="mui-numbox" data-numbox-step='1' data-numbox-min='0' data-numbox-max='10'>
+									<button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+									<input class="mui-numbox-input" type="number" />
+									<button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+								</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media">
+							<a href="javascript:;">
+								<img class="mui-media-object mui-pull-left" src="http://placehold.it/40x30">
+								<div class="mui-media-body">
+									紫菜蛋汤
+									<p class="mui-ellipsis">￥12</p>
+									<p class="mui-ellipsis">余量：<span>14</span></p>
+								</div>
+								<div class="mui-numbox" data-numbox-step='1' data-numbox-min='0' data-numbox-max='10'>
+									<button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+									<input class="mui-numbox-input" type="number" />
+									<button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div id="item2" class="mui-slider-item mui-control-content">
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell mui-media">
+							<a href="javascript:;">
+								<img class="mui-media-object mui-pull-left" src="http://placehold.it/40x30">
+								<div class="mui-media-body">
+									小鸡腿(外)
+									<p class="mui-ellipsis">￥12</p>
+									<p class="mui-ellipsis">余量：<span>14</span></p>
+								</div>
+								<div class="mui-numbox" data-numbox-step='1' data-numbox-min='0' data-numbox-max='10'>
+									<button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+									<input class="mui-numbox-input" type="number" />
+									<button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+								</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media">
+							<a href="javascript:;">
+								<img class="mui-media-object mui-pull-left" src="http://placehold.it/40x30">
+								<div class="mui-media-body">
+									青菜(外)
+									<p class="mui-ellipsis">￥12</p>
+									<p class="mui-ellipsis">余量：<span>14</span></p>
+								</div>
+								<div class="mui-numbox" data-numbox-step='1' data-numbox-min='0' data-numbox-max='10'>
+									<button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+									<input class="mui-numbox-input" type="number" />
+									<button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<footer class="mui-bar mui-bar-footer">
+				<a id="push">
+					<button type="button" class="mui-btn mui-btn-blue mui-btn-block">提交订单</button>
+				</a>
+			</footer>
+		</div>
+	</body>
+
+	<script src="../js/mui.js"></script>
+	<script src="../js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" charset="utf-8">
+		mui.init();
+		document.getElementById('return').addEventListener('tap', function() {
+			mui.openWindow({
+				url: 'dingcan.html',
+				id: 'dingcan'
+			});
+		});
+		document.getElementById('push').addEventListener('tap', function() {
+			mui.openWindow({
+				url: 'ensure.html',
+				id: 'ensure'
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('.mui-btn').click(function() {
+
+			})
+		})
+	</script>
+
+</html>

@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>个人信息</title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			.mui-content>.mui-table-view:first-child {
+				margin-top: 0;
+			}
+			
+			.mui-table-view-cell span {
+				position: absolute;
+				top: 11px;
+				left: 75px;
+				display: block;
+				width: 170px;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+			
+			.mui-table-view-cell select{
+				position: absolute;
+				top: 0px;
+				left: 75px;
+				padding: 10px 0;
+				font-size: 17px;
+			}
+			
+			.info {
+				position: absolute;
+				top: 10px;
+				left: 75px;
+				display: none;
+				width: 170px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a id="return" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">个人信息</h1>
+		</header>
+		<div class="mui-content">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<label>姓&nbsp;&nbsp;&nbsp;名:</label>
+					<span>李四</span>
+					<input type="input" class="info" />
+					<button type="button" class="mui-btn mui-btn-blue">修改</button>
+				</li>
+				<li class="mui-table-view-cell">
+					<label>性&nbsp;&nbsp;&nbsp;别:</label>
+					<select name="sex">
+						<option value="">男</option>
+						<option value="">女</option>
+					</select>
+				</li>
+				<li class="mui-table-view-cell">
+					<label>地&nbsp;&nbsp;&nbsp;址:</label>
+					<span>上海市上海市上海上海市上海市上海上海市上海市上海</span>
+					<input type="input" class="info" />
+					<button type="button" class="mui-btn mui-btn-blue">修改</button>
+				</li>
+			</ul>
+		</div>
+	</body>
+
+	<script src="../js/mui.js"></script>
+	<script src="../js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" charset="utf-8">
+		mui.init();
+		document.getElementById('return').addEventListener('tap', function() {
+			mui.openWindow({
+				url: '../index.html?targetid=2',
+				id: 'index'
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		$(function() {
+			$('.mui-btn').click(function() {
+				var info = $(this).prev('input').val();
+				if($(this).html() == '修改') {
+					$(this).html('确定');
+					$(this).prev('input').show();
+				} 
+				else {
+					if(info != '') {
+						$(this).html('修改');
+						$(this).prev('input').hide();
+						$(this).prev().prev('span').text(info);
+					} 
+					else {
+						mui.toast('请输入正确信息')
+					}
+				}
+			})
+		})
+	</script>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>home</title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			.mui-content>.mui-table-view:first-child {
+				margin-top: 0;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="mui-content">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a id="dingcan" class="mui-navigate-right">订餐</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a id="history" class="mui-navigate-right">历史订单</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a id="unfinished" class="mui-navigate-right">待取订单</a>
+				</li>
+			</ul>
+		</div>
+	</body>
+	<script src="../js/mui.js"></script>
+	<script>
+		mui.init({
+			swipeBack: true //启用右滑关闭功能
+		});
+		document.getElementById('dingcan').addEventListener('tap', function() {
+			mui.openWindow({
+				url: 'dingcan.html',
+				id: 'dingcan.html'
+			});
+		});
+		document.getElementById('history').addEventListener('tap', function() {
+			mui.openWindow({
+				url: 'history.html',
+				id: 'history.html'
+			});
+		});
+		var apple = 0;
+		document.getElementById('unfinished').addEventListener('tap', function() {
+			mui.openWindow({
+				url: 'unfinished.html?tagetid=2',
+				id: 'unfinished.html'
+			});
+		});
+	</script>
+
+</html>
